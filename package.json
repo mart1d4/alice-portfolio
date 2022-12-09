@@ -1,0 +1,39 @@
+{
+    "name": "alice-website",
+    "version": "0.1.0",
+    "description": "Alice's website, to display her work.",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
+    },
+    "keywords": [
+        "Portfolio",
+        "Alice",
+        "Website",
+        "NextJS",
+        "React",
+        "Translation",
+        "i18n",
+        "Internationalization",
+        "Localization",
+        "l10n",
+        "Language",
+        "Languages",
+        "English",
+        "French"
+    ],
+    "author": {
+        "name": "Martin Danton",
+        "email": "contact@mart1d4.com",
+        "url": "https://mart1d4.com/"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "next": "^13.0.6",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}
