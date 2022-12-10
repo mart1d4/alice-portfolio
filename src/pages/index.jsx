@@ -1,18 +1,16 @@
 import Head from 'next/head';
-import styles from '../styles/Main.module.css';
+import { Header, Content, Footer } from '../components';
 
 const Main = () => {
     return (
         <>
             <Head>
-                <title>Home Page</title>
+                <title>Alice | Traductrice</title>
                 <link rel='icon' href='/images/favicon.svg' />
             </Head>
-            <main
-                className={styles.main}
-            >
-                Working properly
-            </main>
+            <Header />
+            <Content />
+            <Footer />
         </>
     );
 }

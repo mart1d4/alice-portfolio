@@ -1,0 +1,12 @@
+.wrapper {
+    width: 100%;
+    min-height: calc(100vh - 80px - 250px);
+    padding: 0 1rem;
+}
+
+.main {
+    width: clamp(320px, 100%, 1200px);
+    min-height: calc(100vh - 80px - 250px);
+    height: 100%;
+    margin: 0 auto;
+}
