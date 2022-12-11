@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
 
 :root {
-    --background-primary: #101010;
-    --background-secondary: #151515;
-    --background-tertiary: #202020;
+    --background-primary: #151515;
+    --background-secondary: #202020;
+    --background-tertiary: #252525;
     --foreground-primary: #ffffff;
     --foreground-secondary: #cccccc;
     --foreground-tertiary: #757575;

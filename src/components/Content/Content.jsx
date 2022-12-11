@@ -22,6 +22,7 @@ const Content = () => {
             >
                 {contentSections.map((section) => (
                     <motion.section
+                        key={section}
                         className={styles.section}
                         whileInView={{
                             opacity: 1,

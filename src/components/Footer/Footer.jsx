@@ -8,7 +8,9 @@ const Footer = () => {
             <footer
                 className={styles.footer}
             >
-                Footer
+                <p>
+                    {new Date().getFullYear()} &copy; Alice - All rights reserved.
+                </p>
             </footer>
         </div>
     );

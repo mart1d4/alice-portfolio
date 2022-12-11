@@ -1,7 +1,6 @@
 import styles from './Header.module.css';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import { useState } from 'react';
-import Link from 'next/link';
 
 const navEntries = [
     {
@@ -24,10 +23,16 @@ const navEntries = [
 
 const Header = () => {
     const [activeLink, setActiveLink] = useState(null);
+    const { scrollY } = useScroll();
 
     return (
-        <div
+        <motion.div
             className={styles.wrapper}
+            style={{
+                boxShadow: scrollY > 70
+                    ? '0 0 10px rgba(0, 0, 0, 0.2)'
+                    : 'none',
+            }}
         >
             <header
                 className={styles.header}
@@ -44,9 +49,9 @@ const Header = () => {
                         className={styles.navList}
                         onMouseLeave={() => setActiveLink(null)}
                     >
-                        {navEntries.map((entry) => (
+                        {navEntries.map((entry, index) => (
                             <li 
-                                key={entry}
+                                key={index}
                                 onMouseEnter={() => setActiveLink(entry)}
                             >
                                 <a
@@ -64,6 +69,7 @@ const Header = () => {
                                         {
                                             entry === activeLink && (
                                                 <motion.div
+                                                    key={entry}
                                                     className={styles.navLinkBackground}
                                                     layoutId={styles.navLinkBackground}
                                                     initial={{
@@ -91,7 +97,7 @@ const Header = () => {
                     </ul>
                 </nav>
             </header>
-        </div>
+        </motion.div>
     );
 }
 
