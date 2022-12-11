@@ -8,30 +8,35 @@ export const Hero = () => {
                 className={styles.hero}
             >
                 <div
-                    className={styles.hero__content}
+                    className={styles.content}
                 >
                     <h2>
                         A new way to translate
                     </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                        euismod, nisl sit amet aliquam lacinia, nunc nisl aliquam
-                    </p>
-                </div>
-
-                <div
-                    className={styles.hero__buttons}
-                >
-                    <motion.button
-                        whileHover={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)', transition: { duration: 0.15 } }}
-                        whileTap={{ scale: 0.995 }}
+                    <p
+                        className={styles.text}
                     >
-                        See my work
-                    </motion.button>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                        euismod, nisl sit amet aliquam lacinia, nunc nisl aliquam.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                        euismod, nisl sit amet aliquam lacinia, nunc nisl aliquam.
+                    </p>
 
-                    <motion.button>
-                        Contact me &gt;
-                    </motion.button>
+                    <div
+                        className={styles.buttons}
+                    >
+                        <motion.button
+                            whileTap={{ scale: 0.985 }}
+                        >
+                            See my work
+                        </motion.button>
+
+                        <motion.button
+                            className='buttonSecondary'
+                        >
+                            Contact me
+                        </motion.button>
+                    </div>
                 </div>
             </div>
 
@@ -39,30 +44,35 @@ export const Hero = () => {
                 className={styles.hero}
             >
                 <div
-                    className={styles.hero__content}
+                    className={styles.content}
                 >
                     <h2>
                         A new way to translate
                     </h2>
-                    <p>
+                    <p
+                        className={styles.text}
+                    >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                        euismod, nisl sit amet aliquam lacinia, nunc nisl aliquam.
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                         euismod, nisl sit amet aliquam lacinia, nunc nisl aliquam
                     </p>
-                </div>
 
-                <div
-                    className={styles.hero__buttons}
-                >
-                    <motion.button
-                        whileHover={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)', transition: { duration: 0.15 } }}
-                        whileTap={{ scale: 0.995 }}
+                    <div
+                        className={styles.buttons}
                     >
-                        See my work
-                    </motion.button>
+                        <motion.button
+                            whileTap={{ scale: 0.985 }}
+                        >
+                            See my work
+                        </motion.button>
 
-                    <motion.button>
-                        Contact me &gt;
-                    </motion.button>
+                        <motion.button
+                            className='buttonSecondary'
+                        >
+                            Contact me
+                        </motion.button>
+                    </div>
                 </div>
             </div>
         </>

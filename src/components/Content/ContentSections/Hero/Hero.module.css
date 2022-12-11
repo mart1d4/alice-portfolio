@@ -1,10 +1,11 @@
 .hero {
     width: 50%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero__content {
+.content {
     width: 75%;
     display: flex;
     flex-direction: column;
@@ -13,62 +14,13 @@
     font-family: 'Antic Slab', sans-serif;
 }
 
-.hero__buttons {
-    width: 70%;
+.text {
+    margin: 2rem 0;
+}
+
+.buttons {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-}
-
-.hero__content h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.hero__content p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-bottom: 2rem;
-}
-
-.hero__buttons button:first-child {
-    width: 60%;
-    padding: 16px 0;
-    background-color: var(--accent-primary);
-    color: var(--foreground-primary);
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: 500;
-    margin-right: 3rem;
-    cursor: pointer;
-}
-
-.hero__buttons button:last-child {
-    background-color: transparent;
-    color: var(--accent-primary);
-    border: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.underline {
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: blue;
-}
-
-.li {
-    position: relative;
-    display: inline-block;
-    margin: 0 1rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-    cursor: pointer;
 }
