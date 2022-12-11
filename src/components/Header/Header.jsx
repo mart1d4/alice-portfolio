@@ -1,5 +1,5 @@
 import styles from './Header.module.css';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import Link from 'next/link';
 
@@ -34,39 +34,58 @@ const Header = () => {
             >
                 <h1
                     className={styles.title}
+                    onClick={() => window.location.reload()}
                 >
-                    <Link
-                        href='/'
-                        scroll={true}
-                    >
-                        <span className={styles.a}>a</span>lice
-                    </Link>
+                    <span className={styles.a}>a</span>lice
                 </h1>
 
                 <nav>
                     <ul
-                        className={styles.ul}
+                        className={styles.navList}
                         onMouseLeave={() => setActiveLink(null)}
                     >
-                        {navEntries.map((entry, index) => (
-                            <li
-                                key={index}
+                        {navEntries.map((entry) => (
+                            <li 
+                                key={entry}
                                 onMouseEnter={() => setActiveLink(entry)}
                             >
-                                <Link
+                                <a
                                     href={entry.link}
-                                    scroll={true}
-                                    className={entry === activeLink ? styles.active : styles.link}
+                                    className={styles.navLink}
+                                    style={{
+                                        color: entry === activeLink
+                                            ? 'var(--foreground-secondary)'
+                                            : 'var(--foreground-tertiary)',
+                                    }}
                                 >
                                     {entry.title}
-                                    {entry === activeLink ? (
-                                        <motion.div
-                                            layoutId={styles.background}
-                                            className={styles.background}
-                                            transition={{ duration: 0.15, type: 'spring', stiffness: 300, damping: 150000 }}
-                                        />
-                                    ) : null}
-                                </Link>
+
+                                    <AnimatePresence>
+                                        {
+                                            entry === activeLink && (
+                                                <motion.div
+                                                    className={styles.navLinkBackground}
+                                                    layoutId={styles.navLinkBackground}
+                                                    initial={{
+                                                        opacity: 0.5,
+                                                        transform: 'scale(0.9)',
+                                                    }}
+                                                    animate={{
+                                                        opacity: 1,
+                                                        transform: 'scale(1)',
+                                                    }}
+                                                    exit={{
+                                                        opacity: 0.5,
+                                                        transform: 'scale(0.9)',
+                                                    }}
+                                                    transition={{
+                                                        duration: 0.15,
+                                                    }}
+                                                />
+                                            )
+                                        }
+                                    </AnimatePresence>
+                                </a>
                             </li>
                         ))}
                     </ul>
