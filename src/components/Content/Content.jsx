@@ -20,20 +20,21 @@ const Content = () => {
             <main
                 className={styles.main}
             >
-                {contentSections.map((section) => (
+                {contentSections.map((section, index) => (
                     <motion.section
-                        key={section}
+                        key={index}
                         className={styles.section}
                         whileInView={{
                             opacity: 1,
-                            x: 0,
+                            y: 0,
                             transition: {
                                 duration: 0.5,
+                                ease: 'easeInOut',
                             },
                         }}
                         initial={{
                             opacity: 0,
-                            x: 200,
+                            y: 200,
                         }}
                         viewport={{ once: true }}
                     >
