@@ -3,6 +3,7 @@
     height: 80px;
     padding: 0 1rem;
     position: fixed;
+    pointer-events: none;
 }
 
 .header {
@@ -12,6 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .title {
@@ -24,20 +26,29 @@
     user-select: none;
     padding: 0.5rem;
     cursor: pointer;
+    pointer-events: all;
 }
 
 .title span {
     display: inline-block;
 }
 
-.navList {
+.navList,
+.navListMenu {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
+    pointer-events: all;
 }
 
-.navLink {
+.navListMenu {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.navLink,
+.navLinkMenu {
     position: relative;
     text-decoration: none;
     font-size: 0.9rem;
@@ -47,6 +58,15 @@
     text-transform: uppercase;
     font-weight: 400;
     user-select: none;
+}
+
+.navLinkMenu {
+    display: relative;
+    width: 50%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
 }
 
 .navLinkBackground {
@@ -60,17 +80,46 @@
     z-index: -1;
 }
 
-.menuToggle > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.navLinkMenuTooltip {
+    white-space: nowrap;
+    position: absolute;
+    right: 250%;
+    top: 50%;
     align-items: center;
-    gap: 0.3rem;
-    cursor: pointer;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: var(--background-secondary);
+    color: var(--foreground-secondary);
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 0.75rem;
+    letter-spacing: normal;
+    text-transform: none;
+    pointer-events: none;
 }
 
-.menuToggle > div > div {
-    width: 1.5rem;
-    height: 0.1rem;
-    background: var(--foreground-primary);
+.menu {
+    border-radius: 100vw;
+    width: 3rem;
+    min-height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    pointer-events: all;
+    position: absolute;
+    right: 0;
+    top: calc(25% - 0.5rem);
+    padding: 1rem 0;
+}
+
+.menuToggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }

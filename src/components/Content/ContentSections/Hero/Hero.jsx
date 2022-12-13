@@ -26,13 +26,14 @@ export const Hero = () => {
                         className={styles.buttons}
                     >
                         <motion.button
+                            className={styles.buttonPrimary}
                             whileTap={{ scale: 0.985 }}
                         >
                             See my work
                         </motion.button>
 
                         <motion.button
-                            className='buttonSecondary'
+                            className={styles.buttonSecondary}
                         >
                             Contact me
                         </motion.button>
@@ -62,13 +63,14 @@ export const Hero = () => {
                         className={styles.buttons}
                     >
                         <motion.button
+                            className={styles.buttonPrimary}
                             whileTap={{ scale: 0.985 }}
                         >
                             See my work
                         </motion.button>
 
                         <motion.button
-                            className='buttonSecondary'
+                            className={styles.buttonSecondary}
                         >
                             Contact me
                         </motion.button>
