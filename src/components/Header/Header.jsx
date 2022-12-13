@@ -63,7 +63,7 @@ const Header = () => {
         handleScroll();
         window.addEventListener('scroll', handleScroll);
         document.body.addEventListener('click', (event) => {
-            if (showMenu && !menu.current.contains(event.target)) {
+            if (menu.current && !menu.current.contains(event.target)) {
                 setShowMenu(false);
             }
         });

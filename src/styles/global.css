@@ -19,6 +19,7 @@
     --foreground-tertiary: #757575;
     --accent-primary: #5e81ac;
     --accent-secondary: #ebcb8b;
+    color-scheme: dark;
 }
 
 ::selection {
