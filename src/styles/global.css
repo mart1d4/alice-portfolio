@@ -10,16 +10,32 @@
     font-style: normal;
 }
 
-:root {
-    --background-primary: #151515;
-    --background-secondary: #202020;
-    --background-tertiary: #252525;
-    --foreground-primary: #ffffff;
-    --foreground-secondary: #cccccc;
-    --foreground-tertiary: #757575;
-    --accent-primary: #5e81ac;
-    --accent-secondary: #ebcb8b;
-    color-scheme: dark;
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-primary: #161620;
+        --background-secondary: #242933;
+        --background-tertiary: #2e3440;
+        --foreground-primary: #eceff4;
+        --foreground-secondary: #d8dee9;
+        --foreground-tertiary: #4c566a;
+        --accent-primary: #5e81ac;
+        --accent-secondary: #ebcb8b;
+        color-scheme: dark;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-primary: #eceff4;
+        --background-secondary: #e5e9f0;
+        --background-tertiary: #d8dee9;
+        --foreground-primary: #2e3440;
+        --foreground-secondary: #3b4252;
+        --foreground-tertiary: #434c5e;
+        --accent-primary: #5e81ac;
+        --accent-secondary: #ebcb8b;
+        color-scheme: light;
+    }
 }
 
 ::selection {

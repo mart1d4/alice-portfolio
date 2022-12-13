@@ -168,8 +168,8 @@ const Header = () => {
                                                     className={styles.navLink}
                                                     style={{
                                                         color: entry === activeLink
-                                                            ? 'var(--foreground-secondary)'
-                                                            : 'var(--foreground-tertiary)',
+                                                            ? 'var(--foreground-primary)'
+                                                            : 'var(--foreground-secondary)',
                                                     }}
                                                 >
                                                     {entry.title}
