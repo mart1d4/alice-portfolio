@@ -60,7 +60,6 @@ const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => setScrollY(window.scrollY);
-        handleScroll();
         window.addEventListener('scroll', handleScroll);
         document.body.addEventListener('click', (event) => {
             if (menu.current && !menu.current.contains(event.target)) {
@@ -84,9 +83,9 @@ const Header = () => {
             <header
                 className={styles.header}
             >
-                <div
+                <a
                     className={styles.title}
-                    onClick={() => window.location.reload()}
+                    href='/'
                 >
                     <span className={styles.a}>a</span>
                     <AnimatePresence>
@@ -115,7 +114,7 @@ const Header = () => {
                                 </motion.span>
                         )))}
                     </AnimatePresence>
-                </div>
+                </a>
 
                 <AnimatePresence mode='wait'>
                     {scrollY < 70

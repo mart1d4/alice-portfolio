@@ -3,13 +3,26 @@ import { Hero } from './ContentSections';
 import { motion } from 'framer-motion';
 
 const contentSections = [
-    <Hero />,
-    <Hero />,
-    <Hero />,
-    <Hero />,
-    <Hero />,
-    <Hero />,
-    <Hero />,
+    {
+        id: 'home',
+        component: <Hero />,
+    },
+    {
+        id: 'about',
+        component: <Hero />,
+    },
+    {
+        id: 'projects',
+        component: <Hero />,
+    },
+    {
+        id: 'contact',
+        component: <Hero />,
+    },
+    {
+        id: 'theme',
+        component: <Hero />,
+    },
 ];
 
 const Content = () => {
@@ -37,8 +50,9 @@ const Content = () => {
                             y: 200,
                         }}
                         viewport={{ once: true }}
+                        id={section.id}
                     >
-                        {section}
+                        {section.component}
                     </motion.section>
                 ))}
             </main>

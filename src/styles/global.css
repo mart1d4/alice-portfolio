@@ -44,6 +44,7 @@ body,
     color: var(--foreground-primary);
     font-size: 16px;
     font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
 }
 
 button {
